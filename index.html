@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HTML5记事本</title>
+   
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dtree.css">
+  <link rel="stylesheet" href="css/peculiar.css">
+  <link rel="stylesheet" href="css/zTreeStyle/zTreeStyle.css" type="text/css">
+  <link rel="stylesheet" href="editor/themes/default/default.css" />
+
+  <script src="js/jquery-1.10.2.min.js"></script>
+  <script src="js/dtree.js"></script>
+  <script charset="utf-8" src="editor/kindeditor.js"></script>
+  <script charset="utf-8" src="editor/lang/zh_CN.js"></script>
+  <script src="js/jquery.ztree.all-3.5.js"></script>
+   <!-- <script src="js/jquery.ztree.core-3.5.js"></script> -->
+  <script src="js/ztreeEdit_fun.js"></script>
+  
+</head>
+<body>
+  <!--  <iframe id="iframeContent" src="http://www.xnote.cn/editor/fckeditor.html?InstanceName=content&Toolbar=Basic" width="100%" height="350px" frameborder="0" scrolling="No"></iframe> -->
+  <div id="page-wrapper" class="clearfix">
+    <h1>HTML5记事本</h1>
+    <p>你所编写的日志会永久保存在本地计算机中，请放心使用！目前只支持Chrome浏览器。</p>
+
+    <form action="#" method="POST" id="file-form">
+      <div class="field">
+      <h2>标题：</h2>
+        <input type="text" name="filename" id="filename" placeholder="文件名 (例如. 日记20130101.txt)">
+      </div>
+      <div class="field">
+      <h2>内容： <button type="button" id="deleteFile" style="display:inline;font-size:5px;float:right;padding:3px;opacity:0.5;" onMouseOver="this.style.opacity=0.8" onMouseOut="this.style.opacity=0.5">删除此文件</button></h2>
+       
+        <textarea name="content" id="content" placeholder="在这里输入你的内容...">在这里输入你的内容...</textarea>
+
+      </div>
+       <div class="field">
+       <select name="categoryid" id="categoryid" style="width:150px;">
+                            <option value="0">默认分类</option>
+                                                    <option value="52045565"  >个人记事</option>
+                                                    <option value="52045566"  >重要备忘</option>
+                                                    <option value="52045567"  >参考资料</option>
+                                                    <option value="52045568"  >休闲娱乐</option>
+                                                    <option value="52045569"  >小说故事</option>
+                                                    <option value="52045570"  >其他记事</option>
+                                                </select>
+                                                <!-- <a id="linkNewCategory" href="javascript:void(0);" title="新增分类" class="uline" >新增分类</a>
+ -->
+                                                </div>
+      <div class="field">
+        <button type="submit">保存文件</button>
+        <div id="messages"></div>
+      </div>
+    </form>
+    <div id="login">
+      <div id="profile">
+        <div class="icon icon-profile">
+          <div class="icon-profile-circle"></div>
+          <div class="icon-profile-rectangle"></div>
+          <span class="name"><a href="login/">登陆</a></span>
+        </div>
+      </div>
+    </div>
+    <div id="files">
+      <h2>目录</h2>
+      <div id="dir-list" class="ztree">
+       
+       <script type="text/javascript">
+    //    d = new dTree('d');
+
+    //   d.add(0,-1,'全部','/note/','全部','','images/dtree/folder.gif','images/dtree/folderopen.gif');
+        
+    //                 d.add(52045565,0,'个人记事','/note/list/52045565/','个人记事记事','','images/dtree/folder.gif','images/dtree/folderopen.gif');
+    //                 d.add(52045566,0,'重要备忘','/note/list/52045566/','重要备忘记事','','images/dtree/folder.gif','images/dtree/folderopen.gif');
+    //                 d.add(52045567,0,'参考资料','/note/list/52045567/','参考资料记事','','images/dtree/folder.gif','images/dtree/folderopen.gif');
+    //                 d.add(52045568,0,'休闲娱乐','/note/list/52045568/','休闲娱乐记事','','images/dtree/folder.gif','images/dtree/folderopen.gif');
+    //                 d.add(52045569,0,'小说故事','/note/list/52045569/','小说故事记事','','images/dtree/folder.gif','images/dtree/folderopen.gif');
+    //                 d.add(52045570,0,'其他记事','/note/list/52045570/','其他记事记事','','images/dtree/folder.gif','images/dtree/folderopen.gif');
+            
+    // //d.add(-3,0,'','','','','/images/dtree/empty.gif','/images/dtree/empty.gif');
+    // d.add(-4,0,'草稿箱','/note/draft/','草稿箱','','images/dtree/77.gif','images/dtree/77.gif');
+    // d.add(-5,0,'回收站','/note/recycle/','回收站','','images/dtree/trash.gif','images/dtree/trash.gif');
+
+    // document.write(d);
+     </script>
+     </div>
+     <ul id="file-list"></ul>
+    </div>
+    <script src="js/editor.js"></script>
+    <script src="js/myTree.js"></script>
+    <script src="js/app.js"></script>
+
+  
+  </div>
+</body>
+<footer style="text-align: center;font-size: 15px;padding-bottom: 1rem;">copyRight by 晋文格墨   2010-2013</footer>
+</html>
